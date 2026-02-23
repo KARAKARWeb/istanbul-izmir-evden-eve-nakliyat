@@ -1,0 +1,46 @@
+{
+  "title": "İstanbul'dan İzmir'e Nakliye Sürecinde Sık Sorulan Sorular",
+  "description": "<p>Sık sorulanlar, İstanbul İzmir taşımacılığına dair fiyat, sigorta, asansör ve sözleşme detaylarını tek sayfada toparlar; karar süreniz kısalır.</p>",
+  "faqs": [
+    {
+      "q": "İstanbul İzmir evden eve nakliyat fiyatı nasıl hesaplanır?",
+      "a": "Metreküp, kat, mesafe, paketleme tipi, asansör ihtiyacı ve hamallık bedeli etkiler. Oda sayısı, bina erişimi ve tarih net olursa ev taşıma ücretleri sabitlenir."
+    },
+    {
+      "q": "Ücretsiz ekspertiz randevusu ne zaman yapılır?",
+      "a": "Ekspertiz randevuyla yapılır; mobilya sökümü, koli adedi, taşıma yolu ve araç kapasitesi ölçülür. Listeyle hazırlık yaparsınız, nakliyat günü sürpriz yaşamazsınız."
+    },
+    {
+      "q": "Sözleşmeli evden eve nakliyat sözleşmesinde hangi maddeler bulunur?",
+      "a": "Sözleşmede tarih, güzergâh, ücret, sorumluluk ve teslim tutanağı yer alır. İrsaliye, poliçe numarası ve koli listesi saklanır; böylece uyuşmazlıkta kayıtlar konuşur."
+    },
+    {
+      "q": "Sigortalı ev taşıma poliçesi hangi riskleri kapsar?",
+      "a": "Poliçe, taşıma kaynaklı riskleri kapsar; yüksek değerli ürünler tek tek beyan edilir. Hasarda fotoğraf, tutanak ve poliçe bilgisiyle bildirim açılır, süreç hızla sonuçlanır."
+    },
+    {
+      "q": "Asansörlü ev taşıma hangi binalarda zorunlu olur, dış cephe asansörüne kim karar verir?",
+      "a": "Cephe dar, merdiven dikse asansör önerilir; ekspertiz karar verir. Kurulum alanı boşaltılır, site izni alınır, kablo hattı ve güvenlik şeridi hazırlanır."
+    },
+    {
+      "q": "İstanbul İzmir taşımacılığında yol kaç saat sürer, mola planı hangi ölçüte göre yapılır?",
+      "a": "Süre trafik ve yük durumuna göre değişir; rota mola noktalarıyla planlanır. Kayış ve takozla sabitleme yapılır. Gece teslimat, site kuralları uygunsa organize edilir."
+    },
+    {
+      "q": "Paketleme malzemelerinde hangi standardı uygularsınız?",
+      "a": "Çift kat streç, balonlu, battaniye ve karton köşe kullanırız. Camlar köpükle desteklenir. Gardırop kutusu, askılı sistem ve rulo ambalaj seçenekleri sunulur."
+    },
+    {
+      "q": "Ofis taşımacılığı sırasında iş kesilmesin diye nasıl zamanlama yapılır?",
+      "a": "Departman bazlı etiketleme yapılır; cihazlar anti-statik korumayla taşınır. Kritik birimler önce kurulup ağ düzeni sağlanır. Plan uygunsa aynı gün açılış yapılır."
+    },
+    {
+      "q": "Eşya depolama gerektiğinde süreç nasıl işler?",
+      "a": "Eşyalar envanterlenir, kilitli alana alınır, giriş çıkış kayıt altındadır. Süre uzadıkça birim fiyat dengelenir; kısa dönem daha esnek, uzun dönem daha avantajlı olur."
+    },
+    {
+      "q": "Şehirlerarası evden eve nakliyat için hangi günler avantajlıdır?",
+      "a": "Hafta içi trafik daha öngörülebilir; hafta sonu talebe bağlı fark oluşabilir. Yaz ve bayram döneminde 7–10 gün önce aramak, ekip ve araç planını güvenceye alır."
+    }
+  ]
+}

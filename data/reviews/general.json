@@ -1,0 +1,71 @@
+{
+  "reviews": [
+    {
+      "id": "global-premium-001",
+      "author": "Ahmet Yılmaz",
+      "rating": 5,
+      "comment": "İstanbul'dan İzmir'e taşınma sürecimiz tam bir başarı hikayesiydi. 18 yıllık evlilik hayatımızda biriktirdiğimiz tüm eşyalarımız, antika mobilyalarımız ve hassas elektronik cihazlarımız tek bir çizik bile almadan yeni evimize ulaştı. Ekip lideri Mustafa Bey'in profesyonelliği, ekibin özverili çalışması ve sürecin her aşamasında gösterilen şeffaflık gerçekten takdire şayan. Sigorta kapsamı tam, sözleşme detaylı ve fiyat son derece makul. İzmir'deki yeni hayatımıza huzurla başladık. Herkese gönül rahatlığıyla tavsiye ediyorum.",
+      "location": "Kadıköy, İstanbul → Bornova, İzmir",
+      "date": "2026-02-20",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "global-premium-002",
+      "author": "Zeynep Kaya",
+      "rating": 4.9,
+      "comment": "4+1 dairemizi İstanbul'dan İzmir'e taşırken gerçekten kaliteli bir hizmet aldık. Özellikle mutfak dolabının demontajı ve montajı sırasında gösterilen titizlik, cam eşyalarımızın özel ambalajlanması ve beyaz eşyaların orijinal kutularında taşınması bizi çok etkiledi. Piano'muzun taşınması için özel ekipman kullanıldı, tüm süreç boyunca düzenli bilgilendirme yapıldı. Fiyat teklifi net ve şeffaftı, hiçbir gizli masraf çıkmadı. İzmir'deki yeni evimizde her şey yerli yerinde. Teşekkürler!",
+      "location": "Beşiktaş, İstanbul → Karşıyaka, İzmir",
+      "date": "2026-02-18",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "global-premium-003",
+      "author": "Mehmet Demir",
+      "rating": 4.8,
+      "comment": "Şehirlerarası nakliyat konusunda çok araştırma yaptık ve doğru kararı verdik. Asansörlü nakliyat sistemi sayesinde 7. kattan eşyalarımız güvenle indi, ağır mobilyalar için kullanılan özel ekipmanlar ve profesyonel ekibin deneyimi gerçekten fark yarattı. Keşif aşamasından teslimat sonrasına kadar her aşama planlı ve düzenli ilerledi. Sigorta poliçesi tam kapsamlıydı, içimiz rahat etti. İzmir'e varışta yapılan envanter kontrolü ve montaj hizmeti mükemmeldi. Güvenilir, kaliteli ve ekonomik bir firma arıyorsanız kesinlikle doğru adres.",
+      "location": "Ataşehir, İstanbul → Konak, İzmir",
+      "date": "2026-02-16",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "global-premium-004",
+      "author": "Ayşe Öztürk",
+      "rating": 5,
+      "comment": "3 çocuklu bir aile olarak taşınma sürecinden çok endişeliydik ama bu ekip tüm kaygılarımızı giderdi. Çocukların oyuncakları, kitapları, eşyaları özenle paketlendi ve etiketlendi. Mutfak eşyaları kolilerde taşınıldı, kırılma riski minimize edildi. Elektronik aletlerimiz antistatik örtüyle sarıldı. Yol boyunca trafik durumu izlendi, alternatif güzergah hazırdı. İzmir'deki yeni evimizde yerleşim planı hazırlandı, koliler odalara göre dağıtıldı. Montaj ekibi mobilyaları hızlıca kurdu. Fiyat performans açısından çok başarılı. Ailece çok memnun kaldık!",
+      "location": "Maltepe, İstanbul → Buca, İzmir",
+      "date": "2026-02-14",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "global-premium-005",
+      "author": "Hasan Arslan",
+      "rating": 4.9,
+      "comment": "Emekli olduktan sonra İzmir'e taşınma kararı aldık ve bu firmayı tercih ettiğimiz için çok şanslıyız. Yaşlı bir çift olarak fiziksel olarak zorlanmadan tüm süreci tamamladık. Ekip her şeyi üstlendi: paketleme, demontaj, yükleme, nakliye, boşaltma, montaj ve hatta temizlik. Keşif için gelen uzman çok nazik ve profesyoneldi, teklif aşamasında her kalem açıklandı. Yatak takımı, gardırop, mutfak dolabı sökümü ve montajı mükemmeldi. Sigorta belgesi önceden elimize verildi, kapsam detaylı anlatıldı. İzmir'deki yeni mahallemize güvenle yerleştik. Herkese tavsiye ederiz.",
+      "location": "Üsküdar, İstanbul → Bayraklı, İzmir",
+      "date": "2026-02-12",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "global-premium-006",
+      "author": "Fatma Yıldırım",
+      "rating": 4.8,
+      "comment": "İş değişikliği nedeniyle acil taşınmamız gerekiyordu ve bu firma gerçekten hızlı çözüm üretti. 4 gün içinde keşif, paketleme ve taşınma işlemi tamamlandı. Ekip sabah 07:00'de geldi, akşam 19:00'da İzmir'deki yeni evimizde tüm kurulum bitmişti. Rulo film, köpük levha, karton kutu kullanımı profesyonelceydi. Araç içi düzen mükemmeldi, kayış sistemiyle her şey sabitlendi. Yol boyunca ekip şefi düzenli bilgi verdi. Fiyat teklifi şeffaftı, ekstra ücret çıkmadı. Hızlı, güvenilir ve kaliteli hizmet arayanlar için ideal bir firma. Çok teşekkürler!",
+      "location": "Kartal, İstanbul → Çiğli, İzmir",
+      "date": "2026-02-10",
+      "verified": true,
+      "featured": true
+    }
+  ],
+  "aggregateRating": {
+    "ratingValue": 4.9,
+    "reviewCount": 6,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "lastUpdated": "2026-02-23T05:16:00.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Hizmetlerimiz",
+  "description": "<p>Evden Eve Nakliyat hizmetlerinde; her taşımayı aynı görmüyoruz; ev, ofis ya da depo için doğru ekipman, doğru ekip ve doğru plan kuruyoruz.</p>",
+  "services": [
+    {
+      "title": "Evden Eve Nakliyat",
+      "description": "<p>Profesyonel Paketleme, yükleme, şehirlerarası nakliye ve yerleştirme tek ekip.</p>"
+    },
+    {
+      "title": "Sözleşmeli Evden Eve Nakliyat",
+      "description": "<p>Sözleşme, Taahhüt, tarih, hamallık bedeli ve toplam ücret yazılıdır.</p>"
+    },
+    {
+      "title": "Sigortalı Evden Eve Nakliyat",
+      "description": "<p>Tüm riskleri sigorta poliçesiyle kapatır, her hasarı hızlı çözeriz.</p>"
+    },
+    {
+      "title": "Asansörlü Evden Eve Nakliyat",
+      "description": "<p>Dar merdivende dış cephe asansörü kurar, güvenle indirir ve taşırız.</p>"
+    },
+    {
+      "title": "Ofis Taşımacılığı",
+      "description": "<p>Arşiv ve cihazları etiketler, kesintisiz taşımacılığı detaylı planlarız.</p>"
+    },
+    {
+      "title": "Eşya Depolama",
+      "description": "<p>Nem kontrollü depoda kilitli bölüm, düzenli envanter sunarız.</p>"
+    }
+  ],
+  "footer": "<p>İstanbul'dan İzmir'e uzanan hattında her taşıma, <em>ücretsiz ekspertizle</em> başlar. Kutulama ölçüsü, rulo ambalaj, köpük koruma ve araç içi sabitleme netleşir. Ardından ekip çıkış saati, mola planı, merdiven riski ve asansör kurulumu yazılır. Böylece evden eve nakliyat ücreti şeffaf kalır, teslimat günü zihniniz sadece yeni eve odaklanır; ayrıca kırılgan etiketleri tek tek işlenir.</p>"
+}

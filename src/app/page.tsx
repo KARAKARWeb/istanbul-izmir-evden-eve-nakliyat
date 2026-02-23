@@ -1,0 +1,216 @@
+import { Metadata } from 'next';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { SchemaRenderer } from '@/components/seo/SchemaRenderer';
+import { TOC } from '@/components/shared/TOC';
+import { MobileFloatingButtons } from '@/components/shared/MobileFloatingButtons';
+import { ScrollToTop } from '@/components/shared/ScrollToTop';
+import { HeroSection } from '@/components/homepage/HeroSection';
+import { TopSEOArticle } from '@/components/homepage/TopSEOArticle';
+import { ServicesSection } from '@/components/homepage/ServicesSection';
+import { WhyUsSection } from '@/components/homepage/WhyUsSection';
+import { RouteInfoSection } from '@/components/homepage/RouteInfoSection';
+import { GallerySection } from '@/components/homepage/GallerySection';
+import { PricingSection } from '@/components/homepage/PricingSection';
+import { RegionsShowcase } from '@/components/homepage/RegionsShowcase';
+import { FAQSection } from '@/components/homepage/FAQSection';
+import { GlobalReviewsSection } from '@/components/homepage/GlobalReviewsSection';
+import { ContactForm } from '@/components/homepage/ContactForm';
+import { SEOContentSection } from '@/components/homepage/SEOContentSection';
+import { CTASection } from '@/components/homepage/CTASection';
+import { getPageSEO } from '@/lib/seo/getPageSEO';
+import { generateHomePageSchema } from '@/lib/seo/generateSchemas';
+import { getRouteInfo } from '@/lib/data/getRouteInfo';
+import { getSiteSettings, getContactSettings } from '@/lib/seo/getContactSettings';
+
+// ISR: 1 saat cache
+export const revalidate = 3600;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pageSEO = await getPageSEO('home');
+  
+  return {
+    title: pageSEO.title,
+    description: pageSEO.description,
+    keywords: pageSEO.keywords,
+    alternates: {
+      canonical: '/',
+    },
+    openGraph: {
+      title: pageSEO.title,
+      description: pageSEO.description,
+      url: '/',
+      type: 'website',
+      locale: 'tr_TR',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageSEO.title,
+      description: pageSEO.description,
+    },
+  };
+}
+
+// Server-side content data fetch - Direct file read (Vercel compatible)
+async function fetchContentData() {
+  const fs = require('fs/promises');
+  const path = require('path');
+  
+  async function readJSON(filePath: string) {
+    try {
+      const fullPath = path.join(process.cwd(), filePath);
+      const data = await fs.readFile(fullPath, 'utf-8');
+      return JSON.parse(data);
+    } catch {
+      return null;
+    }
+  }
+  
+  try {
+    const [servicesData, whyUsData, galleryData, faqData, seoTopData, seoBottomData, heroData, processData, pricingData, reviewsData, ctaData, footerLayer1, footerLayer2, footerLayer3] = await Promise.all([
+      readJSON('data/content/services.json'),
+      readJSON('data/content/why-us.json'),
+      readJSON('data/content/gallery.json'),
+      readJSON('data/content/faq.json'),
+      readJSON('data/content/seo-top.json'),
+      readJSON('data/content/seo-bottom.json'),
+      readJSON('data/settings/hero.json'),
+      readJSON('data/content/process.json'),
+      readJSON('data/content/pricing.json'),
+      readJSON('data/reviews/general.json'),
+      readJSON('data/content/cta.json'),
+      readJSON('data/footer/layer-1.json'),
+      readJSON('data/footer/layer-2.json'),
+      readJSON('data/footer/layer-3.json'),
+    ]);
+    return { 
+      services: servicesData, 
+      whyUs: whyUsData, 
+      gallery: galleryData, 
+      faq: faqData, 
+      seoTop: seoTopData, 
+      seoBottom: seoBottomData, 
+      hero: heroData, 
+      process: processData, 
+      pricing: pricingData, 
+      reviews: reviewsData,
+      cta: ctaData,
+      footer: {
+        layer1: footerLayer1,
+        layer2: footerLayer2,
+        layer3: footerLayer3
+      }
+    };
+  } catch {
+    return { services: null, whyUs: null, gallery: null, faq: null, seoTop: null, seoBottom: null, hero: null, process: null, pricing: null, reviews: null, cta: null, footer: null };
+  }
+}
+
+const tocItems = [
+  { id: 'hero', title: 'Evden Eve Nakliyat', level: 1 },
+  { id: 'seo-top', title: 'Ev Taşıma', level: 1 },
+  { id: 'services', title: 'Hizmetlerimiz', level: 1 },
+  { id: 'why-us', title: 'Neden Biz', level: 1 },
+  { id: 'route-info', title: 'Rota Bilgileri', level: 1 },
+  { id: 'gallery', title: 'Galeri', level: 1 },
+  { id: 'pricing', title: 'Fiyatlandırma', level: 1 },
+  { id: 'regions', title: 'Hizmet Bölgeleri', level: 1 },
+  { id: 'faq', title: 'Sık Sorulan Sorular', level: 1 },
+  { id: 'reviews', title: 'Müşteri Yorumları', level: 1 },
+  { id: 'contact', title: 'İletişim', level: 1 },
+  { id: 'seo-content', title: 'Detaylı Bilgi', level: 1 },
+];
+
+// Server-side regions data fetch
+async function fetchRegionsData() {
+  const fs = require('fs/promises');
+  const path = require('path');
+  
+  try {
+    const regionsDir = path.join(process.cwd(), 'data/regions');
+    const files = await fs.readdir(regionsDir);
+    const regions = await Promise.all(
+      files
+        .filter((file: string) => file.endsWith('.json'))
+        .map(async (file: string) => {
+          const filePath = path.join(regionsDir, file);
+          const data = await fs.readFile(filePath, 'utf-8');
+          return JSON.parse(data);
+        })
+    );
+    
+    // Active regions only
+    const activeRegions = regions.filter((r: any) => r.active);
+    
+    // Sort by order, then by createdAt
+    activeRegions.sort((a: any, b: any) => {
+      const orderA = a.order ?? 999;
+      const orderB = b.order ?? 999;
+      if (orderA !== orderB) return orderA - orderB;
+      const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return dateB - dateA;
+    });
+    
+    return activeRegions.slice(0, 6); // Footer için ilk 6 bölge
+  } catch {
+    return [];
+  }
+}
+
+export default async function Home() {
+  const pageSEO = await getPageSEO('home');
+  const routeInfo = await getRouteInfo();
+  const siteSettings = await getSiteSettings();
+  const contactSettings = await getContactSettings();
+  const contentData = await fetchContentData();
+  const regionsData = await fetchRegionsData();
+  
+  // FAQ ve reviews verilerini schema'ya geç - SSR uyumlu
+  const schema = await generateHomePageSchema(routeInfo, contentData.faq, contentData.reviews);
+  
+  return (
+    <div className="min-h-screen bg-surface">
+      {/* Schema.org Markup - Dinamik FAQ verilerini içerir */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        suppressHydrationWarning
+      />
+      
+      <Header siteSettings={siteSettings} contactData={contactSettings} />
+      
+      <main>
+        <div id="hero"><HeroSection routeInfo={routeInfo} siteSettings={siteSettings} contactData={contactSettings} heroSettings={contentData.hero} reviewsData={contentData.reviews} /></div>
+        <div id="seo-top"><TopSEOArticle seoData={contentData.seoTop} /></div>
+        
+        {/* TOC Section */}
+        <section className="bg-background border-b border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <TOC items={tocItems} />
+          </div>
+        </section>
+        
+        <div id="services"><div id="hizmetler"><ServicesSection servicesData={contentData.services} /></div></div>
+        <div id="why-us"><WhyUsSection whyUsData={contentData.whyUs} /></div>
+        <div id="route-info"><RouteInfoSection routeInfo={routeInfo} processData={contentData.process} /></div>
+        <div id="gallery"><GallerySection galleryData={contentData.gallery} /></div>
+        <div id="pricing"><PricingSection routeInfo={routeInfo} pricingData={contentData.pricing} /></div>
+        <div id="regions"><RegionsShowcase /></div>
+        <div id="faq"><FAQSection faqData={contentData.faq} /></div>
+        <div id="reviews"><GlobalReviewsSection siteSettings={siteSettings} contactData={contactSettings} reviewsData={contentData.reviews} /></div>
+        <div id="contact"><ContactForm /></div>
+        <div id="seo-content"><SEOContentSection seoData={contentData.seoBottom} /></div>
+        <div id="cta"><CTASection contactData={contactSettings} ctaData={contentData.cta} /></div>
+      </main>
+
+      <Footer siteSettings={siteSettings} contactData={contactSettings} footerData={contentData.footer} regionsData={regionsData} />
+      
+      {/* Mobile Floating Buttons */}
+      <MobileFloatingButtons contactData={contactSettings} />
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
+    </div>
+  );
+}

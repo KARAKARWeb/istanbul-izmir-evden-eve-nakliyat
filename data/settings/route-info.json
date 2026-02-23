@@ -1,0 +1,14 @@
+{
+  "title": "İstanbul'dan İzmir ve Tüm İlçelerine Rota Bilgileri",
+  "description": "<p>Haritadaki rota, İstanbul’dan İzmir’e planlı ilerler; tahmini saat, mola noktaları ve geçiş ücretleri hesaplanır, eşyalarınız varışa göre araçta dengeli yerleştirilir.</p>",
+  "originCoords": "KOZCUOĞLU Eşya Depolama ve Nakliyat Hizmetleri",
+  "destinationCoords": "İzmir",
+  "fromCity": "İstanbul",
+  "toCity": "İzmir",
+  "distance": 480,
+  "duration": 5,
+  "basePrice": 1500,
+  "sourceCity": "İstanbul",
+  "targetCity": "İzmir",
+  "priceMin": 16800
+}

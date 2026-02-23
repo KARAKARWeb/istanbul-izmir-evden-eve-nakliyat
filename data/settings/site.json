@@ -1,0 +1,18 @@
+{
+  "domain": "istanbulizmirevtasima.com.tr",
+  "siteName": "İstanbul İzmir Evden Eve Nakliyat",
+  "siteTitle": "İstanbul İzmir Evden Eve Nakliyat | Profesyonel Taşımacılık",
+  "description": "İstanbul İzmir evden eve nakliyat için ücretsiz ekspertiz, sözleşme ve sigorta. Planlı paketleme, zamanında teslimat, net fiyat tablosu ve kurulum.",
+  "author": "İstanbul İzmir Evden Eve Nakliyat",
+  "logoLight": "/logo-beyaz.svg",
+  "logoDark": "/logo-koyu.svg",
+  "favicon": "/favicon.ico",
+  "language": "tr",
+  "currency": "TRY",
+  "timezone": "Europe/Istanbul",
+  "social": {
+    "twitter": "@istanbulizmir",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/"
+  }
+}
